@@ -2,7 +2,7 @@
 
 SELECT * 
 FROM `students`
-WHERE YEAR(`date_of_birth`) = '1990'
+WHERE YEAR(`date_of_birth`) = 1990
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -10,7 +10,7 @@ WHERE YEAR(`date_of_birth`) = '1990'
 
 SELECT *
 FROM `courses`
-WHERE `cfu` > '10'
+WHERE `cfu` > 10
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -18,7 +18,7 @@ WHERE `cfu` > '10'
 
 SELECT * 
 FROM `students`
-WHERE YEAR(`date_of_birth`) < '1992'
+WHERE YEAR(`date_of_birth`) < 1992
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -35,7 +35,7 @@ AND `year` = '1'
 
 SELECT * 
 FROM `exams`
-WHERE `hour` > '14.00.00'
+WHERE `hour` >= '14'
 AND `date` = '2020/06/20';
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -57,7 +57,7 @@ FROM `departments`
 
 8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
 
-SELECT * 
+SELECT COUNT(*)
 FROM `teachers`
 WHERE ISNULL(`phone`)
 
